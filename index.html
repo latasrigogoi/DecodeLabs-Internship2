@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Sales Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🛒 E-Commerce Sales Dashboard</h1>
+                <p>Analyze your sales, orders, products and customer data</p>
+            </div>
+
+            <button id="themeToggle" class="theme-btn">
+                🌙 Dark Mode
+            </button>
+
+        </header>
+
+
+        <!-- FILTER SECTION -->
+        <section class="filter-section">
+
+            <div class="filter-group">
+                <label for="paymentFilter">
+                    Payment Method
+                </label>
+
+                <select id="paymentFilter">
+                    <option value="">All Payment Methods</option>
+                </select>
+            </div>
+
+
+            <div class="filter-group">
+                <label for="statusFilter">
+                    Order Status
+                </label>
+
+                <select id="statusFilter">
+                    <option value="">All Order Statuses</option>
+                </select>
+            </div>
+
+
+            <button id="resetBtn" class="reset-btn">
+                Reset Filters
+            </button>
+
+        </section>
+
+
+        <!-- KPI CARDS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+
+                <h3>Total Orders</h3>
+
+                <div class="stat-value" id="totalOrders">
+                    0
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="stat-icon">💰</span>
+
+                <h3>Total Sales</h3>
+
+                <div class="stat-value" id="totalSales">
+                    ₹0
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="stat-icon">📊</span>
+
+                <h3>Average Order Value</h3>
+
+                <div class="stat-value" id="averageOrderValue">
+                    ₹0
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="stat-icon">🛍️</span>
+
+                <h3>Average Cart Items</h3>
+
+                <div class="stat-value" id="averageCartItems">
+                    0
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CHARTS -->
+        <section class="charts-grid">
+
+            <!-- SALES TREND -->
+            <div class="chart-card">
+
+                <h2>📈 Sales Trend</h2>
+
+                <div class="chart-container">
+                    <canvas id="salesTrendChart"></canvas>
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT METHOD -->
+            <div class="chart-card">
+
+                <h2>💳 Payment Methods</h2>
+
+                <div class="chart-container">
+                    <canvas id="paymentChart"></canvas>
+                </div>
+
+            </div>
+
+
+            <!-- ORDER STATUS -->
+            <div class="chart-card">
+
+                <h2>📋 Order Status</h2>
+
+                <div class="chart-container">
+                    <canvas id="statusChart"></canvas>
+                </div>
+
+            </div>
+
+
+            <!-- TOP PRODUCTS -->
+            <div class="chart-card">
+
+                <h2>🏆 Top 10 Products</h2>
+
+                <div class="chart-container">
+                    <canvas id="productChart"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>Created using HTML, CSS, JavaScript and Chart.js</p>
+        </footer>
+
+    </div>
+
+
+    <!-- CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- PAPAPARSE FOR CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
